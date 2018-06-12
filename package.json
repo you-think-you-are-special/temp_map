@@ -1,0 +1,25 @@
+{
+  "name": "temp_map",
+  "version": "1.0.0",
+  "description": "TempMap is in-memory data structure with ttl. It has zero-dependencies.",
+  "main": "src/temp_map.js",
+  "engines": {
+    "node": "8.11.1"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "homepage": "https://github.com/you-think-you-are-special/temp_map#readme",
+  "bugs": {
+    "url": "https://github.com/you-think-you-are-special/temp_map/issues"
+  },
+  "author": "Litvinov Alexander <sanderlimail@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.0.0"
+  }
+}
