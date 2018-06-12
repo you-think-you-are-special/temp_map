@@ -9,7 +9,7 @@
   "engineStrict": true,
   "scripts": {
     "test": "nyc mocha",
-    "report-coverage": "nyc report --reporter=text-lcov npm test > coverage.lcov && codecov"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "homepage": "https://github.com/you-think-you-are-special/temp_map#readme",
   "bugs": {

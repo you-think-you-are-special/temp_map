@@ -3,6 +3,7 @@ class TempMap {
     this.__storage = new Map();
   }
 
+
   /**
    * @returns {boolean}
    */
