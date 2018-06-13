@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/you-think-you-are-special/temp_map.svg?branch=master&clean)](https://travis-ci.com/you-think-you-are-special/temp_map)
 [![codecov](https://codecov.io/gh/you-think-you-are-special/temp_map/branch/master/graph/badge.svg)](https://codecov.io/gh/you-think-you-are-special/temp_map)
+[![dependencies Status](https://david-dm.org/you-think-you-are-special/temp_map/status.svg?style=flat-square)](https://david-dm.org/you-think-you-are-special/temp_map)
 
 TempMap is in-memory data structure with ttl.
 It has zero-dependencies.
