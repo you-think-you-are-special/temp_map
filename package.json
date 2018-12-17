@@ -1,6 +1,6 @@
 {
   "name": "temp_map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TempMap is in-memory data structure with ttl. It has zero-dependencies.",
   "main": "src/temp_map.js",
   "engines": {

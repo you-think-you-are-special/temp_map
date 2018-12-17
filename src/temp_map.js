@@ -19,6 +19,18 @@ class TempMap {
 
   /**
    * @param key hashable
+   */
+  remove(key) {
+    const timeoutKey = `${key}_timeout`;
+    const storage = this.__storage;
+
+    storage.delete(key);
+    clearTimeout(storage.get(timeoutKey));
+    storage.delete(timeoutKey);
+  }
+
+  /**
+   * @param key hashable
    * @param value
    * @param {number} expireMs
    * @return {TempMap}
@@ -28,15 +40,10 @@ class TempMap {
     const storage = this.__storage;
 
     if (storage.has(key)) {
-      const timeoutId = storage.get(timeoutKey);
-      storage.set(timeoutKey, setTimeout(() => storage.delete(key), expireMs));
-
-      clearTimeout(timeoutId);
-      storage.delete(timeoutKey);
-    } else {
-      storage.set(timeoutKey, setTimeout(() => storage.delete(key), expireMs));
+      this.remove(key);
     }
 
+    storage.set(timeoutKey, setTimeout(() => this.remove(key), expireMs));
     storage.set(key, value);
     return this;
   }
@@ -46,4 +53,3 @@ class TempMap {
  * @type {TempMap}
  */
 module.exports.TempMap = TempMap;
-
